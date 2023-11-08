@@ -10,10 +10,16 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
+"class": "HealthComponent2D",
+"language": "GDScript",
+"path": "res://Scrpits/Components/HealthComponent/HealthComponent.gd"
+}, {
+"base": "Node2D",
 "class": "ShootComponent2D",
 "language": "GDScript",
 "path": "res://Scrpits/Components/TowerComponent/ShootComponent2D.gd"
 }, {
+<<<<<<< HEAD
 "base": "StaticBody2D",
 "class": "Tower",
 "language": "GDScript",
@@ -22,6 +28,23 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "ShootComponent2D": "res://Icons/ShootComponent.png",
 "Tower": "res://Icons/TowerComponent.png"
+=======
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://Scrpits/StateMachine/State.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://Scrpits/StateMachine/StateMachine.gd"
+} ]
+_global_script_class_icons={
+"HealthComponent2D": "",
+"ShootComponent2D": "",
+"State": "",
+"StateMachine": ""
+>>>>>>> f22c20a264f4480334a94ec8e93af0acd22f244b
 }
 
 [application]

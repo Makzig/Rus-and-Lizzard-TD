@@ -1,6 +1,6 @@
 extends Node2D
 tool 
-class_name ShootComponent2D,  "res://Icons/ShootComponent.png"
+class_name ShootComponent2D
 
 
 export var shoot_timer:NodePath
