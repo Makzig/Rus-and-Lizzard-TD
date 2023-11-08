@@ -10,12 +10,30 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
+"class": "HealthComponent2D",
+"language": "GDScript",
+"path": "res://Scrpits/Components/HealthComponent/HealthComponent.gd"
+}, {
+"base": "Node2D",
 "class": "ShootComponent2D",
 "language": "GDScript",
 "path": "res://Scrpits/Components/TowerComponent/ShootComponent2D.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://Scrpits/StateMachine/State.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://Scrpits/StateMachine/StateMachine.gd"
 } ]
 _global_script_class_icons={
-"ShootComponent2D": "res://Icons/ShootComponent.png"
+"HealthComponent2D": "",
+"ShootComponent2D": "",
+"State": "",
+"StateMachine": ""
 }
 
 [application]
