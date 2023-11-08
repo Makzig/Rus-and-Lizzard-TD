@@ -13,15 +13,25 @@ _global_script_classes=[ {
 "class": "ShootComponent2D",
 "language": "GDScript",
 "path": "res://Scrpits/Components/TowerComponent/ShootComponent2D.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Tower",
+"language": "GDScript",
+"path": "res://Scenes/Towers/StandartTower/Tower.gd"
 } ]
 _global_script_class_icons={
-"ShootComponent2D": "res://Icons/ShootComponent.png"
+"ShootComponent2D": "res://Icons/ShootComponent.png",
+"Tower": "res://Icons/TowerComponent.png"
 }
 
 [application]
 
 config/name="Rus and Lizzard"
 config/icon="res://icon.png"
+
+[autoload]
+
+MousePointer="*res://Scenes/MousePointer/MousePointer.tscn"
 
 [gui]
 
