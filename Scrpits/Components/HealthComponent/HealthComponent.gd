@@ -1,5 +1,5 @@
 extends Node2D
-class_name HealthComponent2D
+class_name HealthComponent2D ,  "res://Icons/HurtComponent.png"
 
 export var health_area: NodePath
 export var max_health = 100

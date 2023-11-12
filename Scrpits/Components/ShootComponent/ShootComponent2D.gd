@@ -11,6 +11,7 @@ export var enanbled:bool = true
 onready var _dir_component = get_node_or_null(direction_component)
 onready var _shoot_timer:Timer = get_node_or_null(shoot_timer)
 
+signal shoot
 
 func _ready() -> void:
 	if _shoot_timer:
@@ -24,6 +25,7 @@ func shoot() -> void:
 	get_tree().current_scene.add_child(bullet)
 	bullet.velocity = direction
 	bullet.rotation_degrees = direction.angle()
+	emit_signal("shoot")
 
 
 func _on_shoot_timeout() -> void:
