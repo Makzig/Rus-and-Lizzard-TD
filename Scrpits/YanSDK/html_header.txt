@@ -1,0 +1,54 @@
+<!-- Yandex Games SDK -->
+<script src="https://yandex.ru/games/sdk/v2"></script>
+
+<script>
+YaGames.init().then(ysdk => { window.ysdk = ysdk; });
+let ysdk;
+
+function initGame(params) {
+  YaGames
+  .init(params)
+  .then(_sdk => {
+    ysdk = _sdk;
+
+    ysdk.features.LoadingAPI?.ready(); // Показываем SDK, что игра загрузилась и можно начинать играть
+  })
+  .catch(console.error);
+}
+
+
+function ShowAd(callback) {
+	ysdk.adv.showFullscreenAdv({
+	    callbacks: {
+	        onClose: function(wasShown) {
+	          // some action after close
+	        },
+	        onError: function(error) {
+	          // some action on error
+	        }
+	    }
+	})
+}
+
+function ShowAdRewardedVideo(callback) {
+	ysdk.adv.showRewardedVideo({
+	    callbacks: {
+	        onOpen: () => {
+	          console.log('Video ad open.');
+	        },
+	        onRewarded: () => {
+	          console.log('Rewarded!');
+	        },
+	        onClose: () => {
+	          console.log('Video ad closed.');
+	        }, 
+	        onError: (e) => {
+	          console.log('Error while open video ad:', e);
+	        }
+	    }
+	})
+}
+
+	
+
+</script>
