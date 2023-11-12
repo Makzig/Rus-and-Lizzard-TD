@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Tower/Tower.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scrpits/Components/LevelWaveComponent/LevelWaveComponent.gd" type="Script" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Label
+
+
+func _process(_delta:float) -> void:
+	text = str(\"Ваши гроши: \" + str( EventBus.level_component.level_money))
+"
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,3 +30,14 @@ position = Vector2( 583, 420 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 512, 301 )
+
+[node name="LevelWaveComponent2D" type="Node2D" parent="."]
+script = ExtResource( 2 )
+level_money = 500
+
+[node name="Label" type="Label" parent="."]
+margin_left = 27.0
+margin_top = 51.0
+margin_right = 67.0
+margin_bottom = 71.0
+script = SubResource( 1 )
