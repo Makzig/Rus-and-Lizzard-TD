@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scrpits/Components/MovementComponent/MovementComponent2D.gd" type="Script" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends DirectionComponent2D
+
+func _input(event):
+	if event is InputEventMouseButton:
+		direction = owner.global_position.direction_to(get_global_mouse_position())
+		print(direction)
+ 
+"
+
+[node name="Nothing" type="Node2D"]
+
+[node name="MovementComponent2D" type="Node2D" parent="."]
+script = ExtResource( 1 )
+direction_component = NodePath("../DirectionComponent2D")
+
+[node name="DirectionComponent2D" type="Node2D" parent="."]
+script = SubResource( 1 )

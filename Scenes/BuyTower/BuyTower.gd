@@ -18,7 +18,7 @@ func _ready() -> void:
 # warning-ignore:return_value_discarded
 		_show_button.connect("pressed", self, "_on_show_pressed")
 	rect_scale = Vector2.ZERO
-
+	
 
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed():

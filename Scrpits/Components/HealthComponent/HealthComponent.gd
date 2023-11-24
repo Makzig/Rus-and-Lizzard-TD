@@ -9,6 +9,3 @@ onready var _health_box: Area2D = get_node_or_null(health_area)
 
 func _ready() -> void:
 	health = max_health
-
-
-

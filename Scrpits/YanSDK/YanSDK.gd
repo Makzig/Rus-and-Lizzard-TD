@@ -8,8 +8,8 @@ onready var win = JavaScript.get_interface("window")
 
 
 
-func _ready() -> void:
-	win.initGame(win)
+#func _ready() -> void:
+#	win.initGame(win)
 
 func js_show_ad():
 	win.ShowAd(callback_ad)

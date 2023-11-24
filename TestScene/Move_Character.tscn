@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scrpits/Components/DirectionComponent2D/DirectionComponent2D.gd" type="Script" id=1]
+[ext_resource path="res://Scrpits/Components/MovementComponent/MovementComponent2D.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+[node name="MovementComponent2D" type="Node2D" parent="."]
+script = ExtResource( 2 )
+acceleration = 10000.0
+max_speed = 8888.23
+direction_component = NodePath("../DirectionComponent2D")
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="DirectionComponent2D" type="Node2D" parent="."]
+script = ExtResource( 1 )
+direction = Vector2( 5.785, 2.432 )

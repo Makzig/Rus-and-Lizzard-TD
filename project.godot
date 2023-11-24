@@ -29,6 +29,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scrpits/Components/LevelWaveComponent/LevelWaveComponent.gd"
 }, {
+"base": "Node2D",
+"class": "MovementComponent2D",
+"language": "GDScript",
+"path": "res://Scrpits/Components/MovementComponent/MovementComponent2D.gd"
+}, {
 "base": "DirectionComponent2D",
 "class": "PathFinder2D",
 "language": "GDScript",
@@ -59,6 +64,7 @@ _global_script_class_icons={
 "DirectionComponent2D": "res://Icons/DirectionComponent2D.png",
 "HealthComponent2D": "res://Icons/HurtComponent.png",
 "LevelWaveComponent2D": "res://Icons/Money.png",
+"MovementComponent2D": "",
 "PathFinder2D": "res://Icons/PathFinding2D.png",
 "ShootComponent2D": "",
 "State": "",
@@ -70,7 +76,7 @@ _global_script_class_icons={
 
 config/name="Rus and Lizzard"
 run/main_scene="res://TestScene/TestScene.tscn"
-config/icon="res://icon.png"
+config/icon="res://Icons/AttackIcon.png"
 
 [autoload]
 

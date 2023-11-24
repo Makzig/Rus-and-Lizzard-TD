@@ -11,17 +11,18 @@ script = ExtResource( 3 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="Control" parent="." instance=ExtResource( 1 )]
-show_button = NodePath("../Button")
-
 [node name="Button" type="Button" parent="."]
 margin_left = -50.0
 margin_top = -33.0
 margin_right = 64.0
-margin_bottom = -7.0
+margin_bottom = 61.0
 theme = ExtResource( 4 )
 icon = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="Button"]
 margin_right = 40.0
 margin_bottom = 20.0
+
+[node name="Control" parent="." instance=ExtResource( 1 )]
+light_mask = 2
+show_button = NodePath("../Button")
