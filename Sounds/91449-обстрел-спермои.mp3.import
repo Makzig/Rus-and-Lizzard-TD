@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/91449-обстрел-спермои.mp3-17bc3b2c6103ea75372f18dfa2e33fe8.mp3str"
+
+[deps]
+
+source_file="res://Sounds/91449-обстрел-спермои.mp3"
+dest_files=[ "res://.import/91449-обстрел-спермои.mp3-17bc3b2c6103ea75372f18dfa2e33fe8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

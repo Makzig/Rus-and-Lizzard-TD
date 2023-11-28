@@ -28,7 +28,7 @@ func movement() -> void:
 	
 	if direction != Vector2.ZERO:
 		velocity += acceleration * direction * delta_time
-		velocity = velocity.clamped(max_speed * delta_time)
+		velocity = velocity.limit_length(max_speed * delta_time)
 	elif direction == Vector2.ZERO:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta_time)
 	velocity = move_character.move_and_slide(velocity)
@@ -37,5 +37,5 @@ func set_enabled(new_enabled) -> void:
 	enabled = new_enabled
 	set_physics_process(enabled)
 
-func _physics_process(delta:float) -> void:
+func _physics_process(_delta:float) -> void:
 	movement()

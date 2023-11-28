@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sounds/91449-обстрел-спермои.mp3" type="AudioStream" id=1]
+
+[node name="FireStrike" type="AudioStreamPlayer2D"]
+stream = ExtResource( 1 )
+pitch_scale = 0.9
+autoplay = true
+attenuation = 1.27456
